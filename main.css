@@ -69,6 +69,7 @@ header {
 
 .button-menu {
     display: none;
+    cursor: pointer;
 }
 
 .conteudo {
@@ -123,6 +124,7 @@ header {
     padding: 5px 0;
     font-weight: bold;
 }
+
 .produto button {
     padding: 12px;
     font-weight: bold;
@@ -132,10 +134,22 @@ header {
     cursor: pointer;
 }
 
+
+
 @media screen and (max-width: 767px) {
     .container {
         max-width: 90%;
 
+    }
+    
+    .menu,
+    .menu li {
+        width: 100%;
+        display: block;
+    }
+
+    .menu {
+        clear: both;
     }
 
     .menu {
@@ -154,13 +168,20 @@ header {
         max-width: 100%;
     }
 
-    .produtos {
-        display: block;
+    .produto {
         justify-content: center;
     }
 
+    .produtos {
+        display: block;
+        margin-left: 25%;
+    }
+
+    .produtos p {
+        max-width: 80%;
+    }
+
     .produtos .produto {
-        border-bottom: 2px solid #ccc;
         margin-top: 8px;
     }
 
@@ -169,7 +190,9 @@ header {
     }
 
     .produto button {
+        width: 70%;
         margin-bottom: 16px;
+        font-weight: bold;
     }
 
     header .container {
@@ -187,6 +210,23 @@ header {
         background-color: white;
         border: none;
     }
+
+    .submenu {
+        display: block;
+        position: relative;
+        border: none;
+        background-color: white;
+        padding: 5px 0;
+    }
+
+    .submenu li a {
+        color: black;
+    }
+
+    .menu li:hover {
+        text-decoration: none;
+    }
+    
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
